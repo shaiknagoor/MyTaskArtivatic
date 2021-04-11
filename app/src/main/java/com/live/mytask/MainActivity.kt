@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Log.v(TAG,"git1")
         val tweetsRepository=MyRepository(this)
         val viewModelProviderFactory= NewViewModelProviderFactory(tweetsRepository)
         viewModel= ViewModelProvider(this,viewModelProviderFactory).get(MyViewmodel::class.java)
